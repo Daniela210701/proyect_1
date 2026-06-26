@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erika Barreto | Panel de Visión Artificial</title>
+    <title>Ing. Erika Barreto | Panel de Visión Artificial</title>
     <style>
         body {
             background-color: #0f172a;
@@ -13,8 +13,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
         .card {
             background-color: #1e293b;
@@ -23,16 +24,37 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
             text-align: center;
             border: 1px solid #38bdf8;
+            max-width: 500px;
+            width: 100%;
         }
         h1 { color: #38bdf8; margin-bottom: 5px; }
         .status {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: bold;
-            color: #4ade80;
-            margin: 20px 0;
+            color: #f59e0b;
+            margin: 15px 0;
             padding: 10px;
             background: #0f172a;
             border-radius: 8px;
+            border: 1px dashed #f59e0b;
+        }
+        .variant-container {
+            text-align: left;
+            margin-top: 20px;
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .variant-title {
+            color: #38bdf8;
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .variant-desc {
+            font-size: 13px;
+            color: #94a3b8;
+            margin: 3px 0 10px 0;
         }
     </style>
 </head>
@@ -40,11 +62,25 @@
 
     <div class="card">
         <h1>Proyecto 1: Visión Artificial</h1>
-        <p>Desarrollado por Ing. Erika Barreto</p>
+        <p>Desarrollado por: <strong>Ing. Erika Barreto</strong></p>
         <hr style="border-color: #334155;">
-        <p>Estado del Modelo (YOLOv8 + Pygame):</p>
-        <div class="status" id="estado">🔴 Sistema Offline</div>
-        <p style="font-size: 12px; color: #94a3b8;">Esperando datos del script local...</p>
+        
+        <div class="status">🖥️ Entorno Local Vinculado (YOLOv8 + Pygame)</div>
+        
+        <p style="font-size: 14px; text-align: left; color: #cbd5e1; margin-bottom: 5px;"><strong>Estructura del Sistema (3 Variantes):</strong></p>
+        
+        <div class="variant-container">
+            <div class="variant-title">🐍 1. interaccion.py (Principal)</div>
+            <div class="variant-desc">Script maestro que ejecuta el bucle de Pygame, procesa los frames de la cámara y despliega la interfaz gráfica interactiva con las predicciones de YOLOv8.</div>
+
+            <div class="variant-title">⚙️ 2. prueba_1.py</div>
+            <div class="variant-desc">Entorno de pruebas controlado para la calibración del umbral de confianza (threshold) de las redes neuronales y testeo de cámara.</div>
+
+            <div class="variant-title">🛠️ 3. prueeba2_.py</div>
+            <div class="variant-desc">Script secundario optimizado para pruebas de rendimiento de hardware y filtrado de frames por segundo (FPS).</div>
+        </div>
+
+        <p style="font-size: 11px; color: #64748b; margin-top: 15px;">Código fuente protegido y versionado en GitHub.</p>
     </div>
 
 </body>
